@@ -1,10 +1,60 @@
 example0.py
 Explain what it does. What do the different lines do?
 
-
-
-
+------------------------------------------------------------------------
+- import time imports the time module
+- time.time() finds how long the program has been alive for
+- sleep() stops the program for the amount time give in the brackets.
+------------------------------------------------------------------------
 
 example1.py
 Explain what it does. Give a brief summary of the program
 and explain the importance of each line.
+
+------------------------------------------------------------------------
+- The program actives a event if the time strikes the time given.
+
+alarms = [0,0,0]
+(Starting time)
+
+delays = [10,20,60]
+(When a code or event is actived or played)
+
+start = time.time()
+(setting the starting time)
+
+alarms[0] = start + delays[0]
+(setting up an event to play at a certain time)
+
+alarms[1] = start + delays[1]
+(setting up an event to play at a certain time)
+
+alarms[2] = start + delays[2]
+(setting up an event to play at a certain time)
+
+while True:
+(Looping the function)    
+
+    for i in range(0,3):
+(If i is inbetween 0  to 3) 
+
+        now = time.time()
+(Now is equal to computer's age)
+
+        if now > alarms[i]:
+(Checks if the time of computer's age is higher than the alarm function, it checks it every second)
+
+            print(f"alarm {i} {delays[i]} second alarm has been triggered because now ({round(now,3)}) > alarm {i} {round(alarms[i],3)}")
+(Prints out an event is happening if at a multiple of 10, 20 or 60)     
+
+            alarms[i] = now + delays[i]
+(Gets the timer going)  
+
+    time.sleep(1)
+(Timer stops for 1 second)  
+
+    print(f"time elapsed is {round(time.time() - start,3)}")
+(Prints the time rounded with a decimal place of 3)  
+------------------------------------------------------------------------
+
+#Done

@@ -32,11 +32,80 @@ appropriate use of return values and input parameters
 # a variable. We will use it as the basis for this 
 # assignment.
 
+B = 'T'
+Value = 0
+Loop = True
+
+Start = time.time()
+print('|------------------------------|')
+print("| * Press [Enter] to advance   |")
+print('|------------------------------|')
+
+while Loop == True:
+    keyboard.wait('enter')
+    Value = Value + 1
+    print(B)
+
+    if Value == 0:
+        B = 'T'
+    elif Value == 1:
+        B = 'Te'
+    elif Value == 2:
+        B = 'Ten'
+    elif Value == 3:
+        B = 'Tenn'
+    elif Value == 4:
+        B = 'Tenna'
+    elif Value == 5:
+        B = 'Tenna '
+    elif Value == 6:
+        B = 'Tenna M'
+    elif Value == 7:
+        B = 'Tenna Mi'
+    elif Value == 8:
+        B = 'Tenna Mik'
+    elif Value == 9:
+        B = 'Tenna Mike'
+    else:
+        Loop = False
+
+End = time.time()
+Time_Took = End - Start
+Time_Took = round(Time_Took,2)
+print('|-------------------------------------------')
+print("| * You took", Time_Took, "seconds")
+print('|-------------------------------------------')
+
+
+#Done
+
+
+
+
+
+
+
+
+
+
+'''
 while True:
+
     y = keyboard.read_key()
     print(y)
-    print(time.now())
-    t = time.localtime()
+
+    
+   # now = time.now()
+   # print(now)
+    
+   
+    t = time.ctime()
     print(t)
-    print(time.strftime("%H",t))
+
+    a = time.strftime(t)
+
+    print(a)
     break
+'''
+
+
